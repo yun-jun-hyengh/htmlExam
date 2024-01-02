@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, thead, tbody, td,th {
+            border:solid 1px #000;border-collapse:collapse;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        <thead>, <tbody>, <tfoot>
+        - 위 태그들을 사용하지 않아도 충분히 테이블을 만들수 있다
+        - 위 태그들을 사용하면 테이블 내용을 그룹화하여 개발자가 코드를 읽을 때 명확하게 
+        구분을 해주기도 하고 상위 태그에 속성을 부여하는 경우 하위 태그까지 일괄적으로 
+        적용되므로 각 개별 행, 열마다 속성을 부여하지 않아도 되는 편리함이 있음 
+        - thead, tfoot은 tbody의 앞 뒤로 한 번씩만 사용 가능하다 
+        - tbody는 여러 번 사용 가능하다 
+        - 제목 본문 요약을 각각 합친 말임 
+    -->
+    <h2>상품 구성</h2>
+    <table>
+        <caption>선물용과 가정용 상품 구성</caption>
+        <thead>
+            <th>용도</th>
+            <th>중량</th>
+            <th>개수</th>
+            <th>가격</th>
+        </thead>
+        <tbody>
+            <td>선물용</td>
+            <td>3kg</td>
+            <td>11~16과</td>
+            <td>35,000원</td>
+        </tbody>
+        <tbody>
+            <td>선물용</td>
+            <td>5kg</td>
+            <td>18~26과</td>
+            <td>52,000원</td>
+        </tbody>
+        <tbody>
+            <td>가정용</td>
+            <td>3kg</td>
+            <td>11~16과</td>
+            <td>30,000원</td>
+        </tbody>
+        <tbody>
+            <td>가정용</td>
+            <td>5kg</td>
+            <td>18~26과</td>
+            <td>47,000원</td>
+        </tbody>
+    </table>
+</body>
+</html>
