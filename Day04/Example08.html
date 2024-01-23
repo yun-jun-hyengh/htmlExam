@@ -4,6 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        .box{
+            background-color: #09c;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        /* 마우스를 올렸을 때 오렌지 색으로 변하게 */
+        .hover_box:hover{
+            background-color: orange;
+        }
+
+        /*
+        > 기호는 자식 선택자로 왼쪽의 요소가 오른쪽의 요소의 직접적인 
+        부모일 때만 스타일을 적용한다는 것을 의미한다 
+
+        즉) .container 클래스를 가진 요소의 자식 중에서 태그 이름이 
+        div인 요소들이 선택된다 
+        .container 클래스를 가진 요소의 직계 자식인 div 요소들에 스타일을
+        적용하겠다는 의미 
+        */
+        .container > div{
+            margin-top: 20px;
+            width: 100px;
+            height: 100px;
+            float: left;
+            background-color: orange;
+        }
+
+        /* 홀수 번째 자식 */
+        .container > div:nth-child(2n + 1){
+            background-color: red;
+        }
+    </style>
 </head>
 <body>
     <!--
@@ -13,15 +47,29 @@
         가상 클래스 선택자 
         - 선택자 뒤에 :가상이벤트를 붙이면 특정 이벤트마다 적용할 스타일을 
         설정 할 수 있으며, 이를 가상 클래스라 한다 
-
-
+        
+        :link - 방문한 적이 없는 링크
+        :visited - 방문한 적이 있는 링크
+        :hover - 마우스를 롤오버 했을 때
+        :active - 마우스를 클릭했을 때
+        :focus - 포커스 되었을 때 (input 태그 등)
+        :first - 첫번째 요소
+        :last - 마지막 요소
+        :first-child - 첫번째 자식
+        :last-child - 마지막 자식
+        :nth-child(2n+1) - 홀수 번째 자식
     -->
     <div class="box hover_box">
        마우스를 올려보세요!!~~ 
     </div>
-    <input type="text" class="fucus_input" value="클릭하세요">
+
     <div class="container">
-        
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
     </div>
 </body>
 </html>
