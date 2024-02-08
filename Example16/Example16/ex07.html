@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="showBtn">보이기</button>
+    <button id="hideBtn">숨기기</button>
+    <p id="p_id">개발자가 자바스크립트를 대하는 태도</p>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+<script>
+    /*
+    효과 메소드
+    - 효과 메소드를 사용하면 css를 사용하는 것 보다 
+    좀 더 역동적인 동작을 적용하여 객체를 화려하게 숨기거나 
+    보이게 할 수 있다 
+    */
+    // show(), hide()
+    // hide() - 선택한 요소를 숨긴다
+    // show() - 선택한 요소를 나타나게 한다 
+    $("#hideBtn").on("click", function () {
+        $("#p_id").hide();
+    });
+
+    $("#showBtn").on("click", function () {
+        $("#p_id").show(3000);
+    })
+</script>
+
+</html>

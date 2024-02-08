@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn1">숨김</button>
+    <button id="btn2">보이기</button>
+    <h2>Hello JavaScript</h2>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+<script>
+    // 숨김 버튼을 클릭시 Hello JavaScript 화면에서 사라져야 되고 
+    // 보이기 버튼을 클릭시 다시 보여야 된다 !! 
+    // 숨겼으면 알림창으로 "요소숨김완료되었습니다." 
+    // 보여졌으면 "요소노출됩니다." 출력
+    $("#btn1").click(function () {
+        $("h2").hide(function () {
+            alert("요소숨김완료되었습니다.");
+        });
+    });
+
+    $("#btn2").click(function () {
+        $("h2").show(function () {
+            alert("요소노출됩니다.");
+        })
+    });
+
+
+</script>
+
+</html>

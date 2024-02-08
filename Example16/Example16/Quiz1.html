@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="https://www.naver.com" id="link">네이버</a>
+    <p></p>
+    <!-- 버튼을 클릭하면 ex01.html로 이동 -->
+    <button id="btn1">이동</button>
+    <!-- 네이버로 이동되는 것을 다음으로 이동되게 하세요 !!-->
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        $("#link").attr("href", "https://www.daum.net/");
+
+        $("#btn1").click(function () {
+            $(location).attr("href", "ex01.html");
+        })
+    });
+</script>
+
+</html>

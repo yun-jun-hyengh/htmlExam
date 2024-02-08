@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // const header = document.querySelector('h1');
+        // //console.log(header);
+        // header.textContent = 'JavaScript World';
+        // header.style.color = 'white';
+        // header.style.backgroundColor = 'black';
+
+        const headers = document.querySelectorAll('h1');
+        headers.forEach(header => {
+            header.textContent = 'JavaScript World';
+            header.style.color = 'white';
+            header.style.backgroundColor = 'black';
+
+        })
+    })
+</script>
+
+</html>

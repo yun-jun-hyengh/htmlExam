@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!--
+    <thead>, <tbody>, <tfoot>
+    - 위 태그들을 사용하지 않아도 충분히 테이블을 만들 수 있음
+    - 위 태그들을 사용하면 테이블 내용을 그룹화하여 개발자가
+    코드를 읽을 때 명확하게 구분 해 주기도 하며 상위 태그에
+    속성을 부여하는 경우 하위 태그까지 일괄적으로 적용되므로
+    각 개별 행, 열 마다 속성을 부여하지 않아도 되는 편리함이
+    있음
+    - thead, tfoot는 tbody의 앞 뒤로 한 번씩만 사용 가능
+    - tbody는 여러번 사용가능 
+  -->
+  <table style="width: 100%; border: 1px;">
+    <thead align="center">
+      <tr>
+        <td colspan="3">머리부분</td>
+      </tr>
+    </thead>
+
+    <tbody align="center">
+      <tr>
+        <td>내용 1</td>
+        <td>내용 2</td>
+        <td>내용 3</td>
+      </tr>
+    </tbody>
+
+    <tbody align="center">
+      <tr>
+        <td>내용 1</td>
+        <td>내용 2</td>
+        <td>내용 3</td>
+      </tr>
+    </tbody>
+
+    <tbody align="center">
+      <tr>
+        <td>내용 1</td>
+        <td>내용 2</td>
+        <td>내용 3</td>
+      </tr>
+    </tbody>
+
+    <tfoot align="center">
+      <tr>
+        <td colspan="3">꼬리부분</td>
+      </tr>
+    </tfoot>
+  </table>
+</body>
+</html>

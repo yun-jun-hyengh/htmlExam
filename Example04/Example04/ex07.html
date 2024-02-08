@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!--
+    체크박스와 라디오 버튼 
+
+    value  
+    - 선택한 체크 박스나 라디오 버튼을 서버에 넘겨줄
+    값을 지정
+
+    checked
+    - 체크박스나 라디오 버튼의 항목은 처음에 아무것도 
+    선택되지 않은 상태로 화면에 표시되는데 여러 항목들 
+    중에서 기본적으로 선택해 놓고 싶은 항목에 사용 !! 
+  -->
+  <form action="#">
+    <fieldset>
+      <legend>수강과목선택</legend>
+      <p><b>수강할 과목을 선택해 주세요</b></p>
+      <label for="">
+        <input type="checkbox" value="s">Spring
+      </label>
+      &nbsp; &nbsp; &nbsp;
+      <label>
+        <input type="checkbox" value="r">React
+      </label>
+      &nbsp; &nbsp; &nbsp;
+      <label for="">
+        <input type="checkbox" value="j">Java
+      </label>
+      &nbsp; &nbsp; &nbsp;
+      <label for="">
+        <input type="checkbox" value="a" checked>Andriod
+      </label>
+
+      <p><b>강사 선택</b></p>
+      <label for="">
+        <input type="radio" value="윤준형" name="teacher">윤준형
+      </label>
+       
+      <label for="">
+        <input type="radio" value="홍길동" name="teacher">홍길동
+      </label>
+
+      <label for="">
+        <input type="radio" value="김길동" name="teacher" 
+        checked>김길동
+      </label>
+    </fieldset>
+
+  </form>
+
+
+</body>
+</html>

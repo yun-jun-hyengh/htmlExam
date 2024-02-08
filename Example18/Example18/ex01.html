@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #cont {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        #screen {
+            width: 700px;
+            height: 400px;
+            user-select: none;
+            text-align: center;
+        }
+
+        #screen.wait {
+            background-color: aqua;
+        }
+
+        #screen.ready {
+            background-color: #FA58D0;
+            color: white;
+        }
+
+        #screen.end {
+            background-color: green;
+            color: white;
+        }
+
+        #result {
+            font-weight: bolder;
+            font-size: xx-large;
+            color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="cont">
+        <div id="screen" class="wait">
+            클릭해서 게임을 시작하세요
+        </div>
+        <div id="result"></div>
+    </div>
+</body>
+<script>
+    let screen = document.querySelector("#screen");
+    let result = document.querySelector("#result");
+    let startTime;
+    let endTime;
+    let timeOut;
+
+    screen.addEventListener('click', () => {
+        // 게임시작 
+        if (screen.classList.contains('wait')) {
+            screen.classList.remove('wait');
+            screen.classList.add('ready');
+            screen.textContent = "초록색이 되면 클릭해주세요!!";
+
+            timeOut = setTimeout(() => {
+                startTime = new Date();
+                screen.click();
+            }, Math.floor(Math.random() * 1000) + 2000);
+            // 초록색 화면을 클릭해야 한다 !! 
+        } else if (screen.classList.contains('ready')) {
+            if (!startTime) { // 빨간색일 때 클릭했을 시 
+                clearTimeout(timeOut);
+                screen.classList.remove('ready');
+                screen.classList.add('wait'); // 다시 원래 화면으로
+                screen.textContent = '초록색으로 화면이 변하면 눌러주세요';
+            } else {
+                screen.classList.remove('ready');
+                screen.classList.add('end');
+            }
+        } else if (screen.classList.contains('end')) {
+            endTime = new Date();
+            let resultTime = endTime - startTime;
+            result.textContent = `당신의 반응속도는 ${resultTime}(ms) 입니다`;
+            startTime = null;
+            endTime = null;
+            screen.classList.remove('end');
+            screen.classList.add('wait');
+            screen.textContent = '클릭해서 게임을 시작하세요';
+        }
+    });
+</script>
+
+</html>

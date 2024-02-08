@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--
+        innerHTML
+        - DOM 내부의 HTML 콘텐츠를 변경하는 속성이다 
+        즉) 해당 요소 내부의 모든 콘텐츠를 다른 콘텐츠로 변경가능
+    -->
+    <div id="cont">
+        Hello World!!~~
+    </div>
+    <button id="btn">버튼</button>
+</body>
+<script>
+    let btn = document.getElementById("btn");
+    let cont = document.getElementById("cont");
+    console.log(cont);
+    btn.addEventListener("click", () => {
+        cont.innerHTML = "<h1>Buy World ㅠㅠ</h1>"
+    })
+</script>
+
+</html>

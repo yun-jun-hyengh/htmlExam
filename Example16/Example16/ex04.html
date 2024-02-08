@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" placeholder="입력" id="input_text" readonly>
+    <button id="btn">버튼</button>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+<script>
+    /*
+    prop()
+    - 엘리먼트의 속성 값을 가져오거나 변경한다는 점에서 attr()과 
+    유사하지만 아무 속성 값이 아닌 true와 false값 만을 
+    가지는 속성 값을 관리한다 
+    */
+    $("#btn").click(function () {
+        $("#input_text").prop("readonly", false);
+    });
+</script>
+
+</html>

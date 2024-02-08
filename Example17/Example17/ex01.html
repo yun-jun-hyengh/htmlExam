@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #cont {
+            background-color: brown;
+            width: 20%;
+            height: 150px;
+        }
+
+        #btn {
+            background: aqua;
+            outline: none;
+            border: none;
+            font-size: 20px;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 15px;
+            width: 10%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="cont">
+
+    </div>
+    <p></p>
+    <button id="btn">버튼</button>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        $("#btn").click(function () {
+            $("#cont").animate({
+                width: '100%'
+            })
+        });
+    })
+</script>
+
+</html>

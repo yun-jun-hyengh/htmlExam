@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="up">UP</button>
+    <button id="down">DOWN</button>
+    <button id="toggle">TOGGLE</button>
+    <br><br>
+    <img src="images/285365_95988_038.png">
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+<script>
+    // slideUp()
+    // 일치하는 요소의 높이에 애니메이션 적용 
+    // 페이지의 아래쪽 부분이 위로 올라가서 항목을 숨기는 것 처럼 보여짐 
+    $("#up").click(function () {
+        $("img").slideUp(1000);
+    })
+
+    //slideDown()
+    // 일치하는 요소의 높이에 애니메이션 적용 
+    // 요소를 아래쪽으로 나타나게 한다 !! 
+    $("#down").click(function () {
+        $("img").slideDown(3000);
+    })
+
+    // slideToggle()
+    // 일치하는 요소의 높이에 애니메이션 적용 
+    // 페이지의 아래쪽 부분이 위나 아래로 항목이 표시되거나 숨겨지는 것 처럼 보임 
+    $("#toggle").click(function () {
+        $("img").slideToggle(3000);
+    })
+</script>
+
+</html>

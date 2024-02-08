@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 10px;
+      padding: 10px;
+    }
+    p{
+      animation-duration: 5s;
+      animation-name: slide;
+      animation-iteration-count: infinite; /* 무한히 반복*/
+    }
+
+    @keyframes slide{
+      from{
+        margin-left: 100%;
+        width: 300%;
+      }
+
+      to{
+        margin-left: 0%;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!--
+    css 애니메이션
+    - 애니메이션(Animation) 효과는 html 요소에 적용되는
+    css 스타일을 다른 css 스타일로 부드럽게 변화시킴 
+    - 애니메이션은 애니메이션을 나타내는 css 스타일과 
+    애니메이션의 sequence를 나타내는 복수의 
+    키프레임(@keyframes) 들로 이뤄짐 
+  -->
+  <p>
+    윤준형은 JAVA를 엄청나게 사랑한다. 너무 사랑한 나머지
+    JAVA를 하기위해 태어났고 JAVA를 너무나도 잘 다룬다.
+    JAVA에 진심인 사람은 이 사람 밖에 없는거 같다.
+  </p>
+</body>
+</html>

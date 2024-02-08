@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!--
+    select 태그 속성 
+    - select 태그를 사용해 만든 드롭다운 목록은 기본적으로
+    옵션이 하나만 표시되는데 옆에 있는 화살표를 클릭해 
+    나머지 옵션을 살펴본 후 필요한 항목을 선택할 수 있다 
+
+    option 태그 속성 
+    - 드롭다운 목록에 표시되는 옵션은 <option> 태그를 
+      이용해 지정한다 
+    
+    value : 해당 항목을 선택할 때 서버로 넘겨줄 값을 지정
+    selected : 드롭다운 메뉴를 삽입할 때 기본적으로 선택해서 
+    보여 줄 항목을 지정한다 
+  -->
+  <label for="prod1">상품선택</label>
+  <select id="prod1">
+    <option value="special_1">선물1</option>
+    <option value="special_2"selected>선물2</option>
+    <option value="special_3">선물3</option>
+    <option value="special_4">선물4</option>
+    <option value="special_5">선물5</option>
+  </select>
+</body>
+</html>

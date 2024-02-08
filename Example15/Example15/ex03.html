@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>브라우저 정보 보기</h1>
+    <button onclick="info()">보기</button>
+    <p>
+        <hr>
+    </p>
+    <p>
+        appName : <span id="name"></span>
+    </p>
+    <p>
+        appversion : <span id="version"></span>
+    </p>
+    <p>
+        language : <span id="language"></span>
+    </p>
+</body>
+<script>
+    /*
+    navigator
+    - 브라우저 공급자 및 버전 정보 등을 포함한 브라우저에 대한 다양한
+    정보를 저장하는 객체!!
+    */
+    //console.log(navigator);
+    function info() {
+        document.getElementById('name').innerText = navigator.appName;
+        document.getElementById('version').innerText = navigator.appVersion;
+        document.getElementById('language').innerText = navigator.language;
+    }
+</script>
+
+</html>

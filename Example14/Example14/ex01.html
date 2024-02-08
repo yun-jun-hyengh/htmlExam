@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--
+        innerHTML, innerText, textContent
+
+        innerHTML
+        - Element의 속성으로 해당 Element의 HTML, XML을 
+        읽어오거나 설정할 수 있다 
+
+        innerText
+        - Element의 속성으로 해당 Element 내에서 사용자에게 보여지는 
+        텍스트 값을 읽어온다 
+
+        textContent
+        - 'Node'의 속성으로 innerText와 달리 <script>나 <style>
+        태그와 상관없이 해당 노드가 가지고 있는 텍스트 값을 출력
+        - 숨겨진 내용까지 확인가능 !!  
+    -->
+    <div id="cont">
+        <h1>JavaScript is fun!!~~</h1>
+        <hr>
+        <p>
+        <h1 style="display: none;">Hello JavaScript</h1>
+        </p>
+    </div>
+    <button onclick="testInnerHTML()">버튼1</button><br><br>
+    <button onclick="testInnerText()">버튼2</button><br><br>
+    <button onclick="testTextContent()">버튼3</button><br><br>
+</body>
+<script>
+    function testInnerHTML() {
+        const cont = document.getElementById('cont');
+        alert(cont.innerHTML);
+    }
+
+    function testInnerText() {
+        const cont = document.getElementById('cont');
+        alert(cont.innerText);
+    }
+
+    function testTextContent() {
+        const cont = document.getElementById('cont');
+        alert(cont.textContent);
+    }
+</script>
+
+</html>

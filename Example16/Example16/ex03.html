@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="userId" placeholder="">
+    <a href=""></a>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+<script>
+    // $(document).ready(function()
+    // document라는 객체의 준비가 끝나면 함수를 실행해라 
+    $(document).ready(function () {
+        let id = $("#userId").attr("placeholder", "아이디를 입력하세요");
+        console.log(id);
+    })
+</script>
+
+</html>

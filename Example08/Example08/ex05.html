@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #square{
+      width: 100px;
+      height: 100px;
+      background-color: aquamarine;
+      margin: auto;
+      margin-top: 400px;
+      animation-name: lotate;
+      animation-duration: 3s;
+    }
+
+    @keyframes lotate{
+      /*
+      transform : 회전, 기울기, 이동효과를 부여할 수 있다
+      
+      시작 시점에선 0도, 50% 시점에선 180도, 완료 시점
+      에선 360도 회전시키는 애니메이션이다. 
+      */
+      0% {
+        transform: rotate(0deg);
+      }
+
+      50%{
+        transform: rotate(180deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="square"></div>
+</body>
+</html>

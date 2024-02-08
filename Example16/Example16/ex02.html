@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <a href="https://www.naver.com/" id="naver">네이버</a><br>
+    <button>버튼</button>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+<script>
+    // attr() : 엘리먼트의 속성 값을 가져오거나 변경할 수 있다 
+    // attr에 하나의 인자를 주면 해당 속성 값만을 조회하고 
+    // 두 개를 주면 해당 속성 값을 변경한다 
+    $("button").click(function () {
+        alert($("#naver").attr("href"));
+    });
+</script>
+
+</html>

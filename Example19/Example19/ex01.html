@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 1000px;
+        }
+
+        canvas {
+            margin-top: 100px;
+            transition: 2s;
+        }
+
+        button {
+            background: aqua;
+            border: none;
+            font-size: 1.5rem;
+            font-weight: bold;
+            transition: .2s;
+            cursor: pointer;
+            width: 100%;
+            margin: 20px;
+            padding: 0.8rem 1.8rem;
+            border-radius: 15px;
+        }
+
+        #menu {
+            width: 100%;
+            height: 960px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            position: relative;
+        }
+
+        #menu::before {
+            margin-top: 100px;
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 50px;
+            border-radius: 5px;
+            background: #000;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 22;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="menu">
+        <!-- 웹 페이지에 그래픽을 그리는데 사용됨 -->
+        <canvas width="600" height="600"></canvas>
+        <button onclick="suffex()">돌리기</button>
+    </div>
+</body>
+<script>
+    const conva = document.querySelector("canvas");
+    const ctx = conva.getContext(`2d`);
+    const product = ["라면", "순두부찌개", "짜장면", "햄버거", "피자", "족발", "부대찌개"];
+    const colors = [];
+
+    const newMake = () => {
+        const [cw, ch] = [conva.width / 2, conva.height / 2];
+        const arc = Math.PI / (product.length / 2);
+        for (let i = 0; i < product.length; i++) {
+            // 곡선 혹은 선을 그릴때 beginPath()로 선그리기 시작을 선언
+            ctx.beginPath();
+            if (colors.length == 0) {
+                for (let j = 0; j < product.length; j++) {
+                    let r = Math.floor(Math.random() * 256);
+                    let g = Math.floor(Math.random() * 256);
+                    let b = Math.floor(Math.random() * 256);
+                    colors.push("rgb(" + r + "," + g + "," + b + ")");
+                }
+            }
+            ctx.fillStyle = colors[i % (colors.length)];
+            ctx.moveTo(cw, ch);
+            ctx.arc(cw, ch, cw, arc * (i - 1), arc * i);
+            ctx.fill();
+            ctx.closePath(); // 시작점으로 돌아가는 선으로 경로를 닫는다 
+        }
+        ctx.fillStyle = "#fff";
+        ctx.font = "18px Pretendard";
+        ctx.textAlign = "center";
+
+        for (let i = 0; i < product.length; i++) {
+            const angle = (arc * i) + (arc / 2);
+            ctx.save();
+
+            ctx.translate(
+                cw + Math.cos(angle) * (cw - 50),
+                cw + Math.sin(angle) * (ch - 50)
+            );
+            ctx.rotate(angle + Math.PI / 2);
+            product[i].split(" ").forEach((text, j) => {
+                ctx.fillText(text, 0, 30 * j);
+            });
+            ctx.restore();
+        }
+    };
+
+    const suffex = () => {
+        conva.style.transform = `initial`;
+        conva.style.transition = `initial`;
+        const alpha = Math.floor(Math.random() * 100);
+
+        setTimeout(() => {
+            const ran = Math.floor(Math.random() * product.length);
+            const arc = 360 / product.length;
+            const rotate = (ran * arc) + 3600 + (arc * 3) - (arc / 4) + alpha;
+            conva.style.transform = `rotate(-${rotate}deg)`;
+            conva.style.transition = `2s`;
+        }, 1);
+    }
+    newMake();
+</script>
+
+</html>

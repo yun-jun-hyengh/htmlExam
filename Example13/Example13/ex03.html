@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--
+        DOM 요소의 선택 
+        - HTML 요소를 다루기 위해서는 우선 해당 요소를 선택해야 한다 
+
+        * 자바스크립트에서 특정 HTML 요소를 선택하는 방법 
+        1. HTML 태그 이름을 이용한 선택 
+        2. 아이디(id)를 이용한 선택 
+        3. 클래스(class)를 이용한 선택 
+        4. name 속성을 이용한 선택 
+        5. css 선택자를 이용한 선택 
+        6. HTML 객체집합을 이용한 선택 
+    -->
+    <h1>HTML 태그 이름을 이용한 선택</h1>
+    <ul>
+        <li>첫번째</li>
+        <li>두번째</li>
+        <li>세번째</li>
+        <li>네번째</li>
+        <li>다섯번째</li>
+    </ul>
+    <p>
+        <hr>
+    </p>
+    <ul>
+        <li>안녕하세요</li>
+        <li>반가워요</li>
+        <li>자바스크립트를 대하는 자세</li>
+        <li>자바스크립트는 이상해</li>
+        <li>자바스크립트는 재밌어</li>
+    </ul>
+</body>
+<script>
+    // 모든 li 태그를 선택
+    let selectedItem = document.getElementsByTagName("li");
+
+    //console.log(selectedItem);
+    for (let i = 0; i < selectedItem.length; i++) {
+        selectedItem.item(i).style.color = "blue";
+    }
+</script>
+
+</html>

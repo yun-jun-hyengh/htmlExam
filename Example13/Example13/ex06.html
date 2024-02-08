@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        #container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <button id="btn"></button>
+    </div>
+</body>
+<script>
+    let btn = document.getElementById("btn");
+    btn.style.color = "red";
+    btn.style.backgroundColor = 'black';
+    btn.textContent = "핵버튼";
+    btn.style.fontSize = '150px';
+
+    btn.addEventListener('click', () => {
+        alert("지구멸망");
+    })
+</script>
+
+</html>
